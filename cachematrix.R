@@ -1,7 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Both the functions work together to return inverse of a matrix
+## in least possible amount of computation and time
 
-#Returns a matrix object
+# "makeCacheMatrix" returns an object which has setters and getters 
+# to compute the inverse of matrix
+# Along with this, the function initializes the inverse to NULL
+
 makeCacheMatrix <- function(x = matrix()) {
 inv <- NULL
 set <- function(y) {
@@ -15,7 +18,8 @@ list(getmat = getmat, setinv = setinv, getinv = getinv)
 }
 
 
-## Returns cached inverse if already computed, else solves inverse and caches it
+## This "cacheSolve" function returns cached inverse if already computed, 
+## else solves inverse, returns inverse and caches it
 
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
